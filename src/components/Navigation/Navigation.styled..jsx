@@ -4,7 +4,8 @@ import { NavLink, Link } from "react-router-dom";
 export const Container = styled.div`
 display: flex;
 justify-content: space-between;
-gap: 390px;
+// gap: 390px;
+width: 661px;
 `
 export const ContainerNav = styled.div`
 display: flex;
