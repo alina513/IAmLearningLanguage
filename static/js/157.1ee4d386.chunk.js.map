@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/157.1ee4d386.chunk.js","mappings":"gMAEe,SAASA,IACpB,OACJC,EAAAA,EAAAA,KAAAC,EAAAA,SAAA,GAGA,C","sources":["pages/TeachersPage.jsx"],"sourcesContent":["\n\nexport default function TeachersPage() {\n    return (\n<>\n</>\n    )\n}"],"names":["TeachersPage","_jsx","_Fragment"],"sourceRoot":""}
