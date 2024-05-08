@@ -13,7 +13,9 @@ import {
   ReadMore,
   ListLevel,
   ItemLevel,
-  Name
+  Name,
+  TextSpeaks,
+  Book
 } from './Card.styled';
 export const Card = () => {
   return (
@@ -33,10 +35,10 @@ export const Card = () => {
           <Name>Jane Smith</Name>
           <ContainerItemText>
           <TitleText>Speaks:</TitleText>
-          <Text> German, French</Text>
+          <TextSpeaks> German, French</TextSpeaks>
           </ContainerItemText>
           <ContainerItemText>
-          <TitleText>Speaks:</TitleText>
+          <TitleText>Lesson Info:</TitleText>
           <Text> Lesson Info</Text>
           </ContainerItemText>
           <ContainerItemText>
@@ -52,6 +54,7 @@ export const Card = () => {
             #A1 Beginner
             </ItemLevel>
           </ListLevel>
+          <Book>Book trial lesson</Book>
         </ContainerText>
       </ContainerPhoto>
     </Wrapper>
