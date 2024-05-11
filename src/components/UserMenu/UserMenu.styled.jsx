@@ -4,7 +4,7 @@ display: flex;
 gap: 16px;
 `
 
-export const Registation = styled.button`
+export const LogOut = styled.button`
 width: 166px;
   height: 48px;
   border-radius: 12px;
@@ -16,17 +16,4 @@ width: 166px;
   display: flex;
   align-items: center;
   justify-content: center;
-`
-export const Login = styled.button`
-font-weight: 700;
-  font-size: 16px;
-  line-height: 125%;
-  color: #121417;
-  background-color: #F8F8F8;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-
 `

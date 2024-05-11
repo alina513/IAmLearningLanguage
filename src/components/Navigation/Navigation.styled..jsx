@@ -24,4 +24,8 @@ color: #121417;
 font-size: 20px;
 font-weight: 500;
 line-heigt: 120%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 2px;
 `

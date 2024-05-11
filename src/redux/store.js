@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import authReducer from './authSlice';
+import {authReducer} from './authSlice';
+import teachersReducer from './teachersSlice';
 
 import {
   persistStore,
@@ -20,6 +21,7 @@ const authPersistConfig = {
 export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
+    // teachers: teachersReducer,
   },
 });
 export const persistor = persistStore(store);

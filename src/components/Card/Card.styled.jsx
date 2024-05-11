@@ -135,3 +135,16 @@ border: none;
     background-color: #F4C8BA;
   }
 `
+export const HeartButton = styled.button`
+border: none;
+background-color: #FFFFFF;
+`
+export const GreenContainer = styled.div`
+position: relative;
+`
+export const Green = styled.svg`
+position: absolute;
+  top: 25px;
+  right: 30px;
+
+`
