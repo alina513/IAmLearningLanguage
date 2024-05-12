@@ -1,9 +1,8 @@
-import { Container } from "./HomePhoto.styled"
+import { Container } from './HomePhoto.styled';
 export const HomePhoto = () => {
-    return (
-        <>
-        <Container/>
-        </>
-    )
-
-}
+  return (
+    <>
+      <Container />
+    </>
+  );
+};

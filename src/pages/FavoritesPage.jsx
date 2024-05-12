@@ -1,4 +1,3 @@
-
 import { FavoriteList } from '../components/FavoriteList/FavoriteList';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -6,7 +5,7 @@ import { Empty } from '../components/Empty/Empty';
 
 export default function FavoritesPage() {
   const [favorites, setFavorites] = useState([]);
- 
+
   useEffect(() => {
     const fetchDataFromLocalStorage = () => {
       const storedItems = JSON.parse(localStorage.getItem('storedItems')) || [];
@@ -25,5 +24,3 @@ export default function FavoritesPage() {
     </>
   );
 }
-
-

@@ -1,65 +1,64 @@
-import Modal from "react-modal";
+import Modal from 'react-modal';
 import sprite from '../../assets/sprite.svg';
-import { Registration } from "./Registration";
-import {Wrapper,
-        Close,
-        Title,
-        Text } from './ModalReg.styled';
+import { Registration } from './Registration';
+import { Wrapper, Close, Title, Text } from './ModalReg.styled';
 
 Modal.setAppElement('#modal');
 
-
-export const ModalRegisration = ({ isOpenModalRegistration, setIsOpenModalRegistration }) => {
-
+export const ModalRegisration = ({
+  isOpenModalRegistration,
+  setIsOpenModalRegistration,
+}) => {
   const customStyles = {
     overlay: {
-      backgroundColor: "rgba(30, 66, 89, 0.4)",
+      backgroundColor: 'rgba(30, 66, 89, 0.4)',
     },
     content: {
-      top: "50%",
-      left: "50%",
-      right: "auto",
-      bottom: "auto",
-      marginRight: "-50%",
-      transform: "translate(-50%, -50%)",
-      padding: "40px",
-      maxWidth: "566px",
-      maxHeight: "600px",
-      borderRadius: "30px",
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      padding: '40px',
+      maxWidth: '566px',
+      maxHeight: '600px',
+      borderRadius: '30px',
     },
   };
-  
-    return (
-      <>
-      <Modal   
+
+  return (
+    <>
+      <Modal
         isOpen={isOpenModalRegistration}
         onRequestClose={() => {
-            setIsOpenModalRegistration(false);
+          setIsOpenModalRegistration(false);
         }}
-             
         style={customStyles}
-
-        contentLabel="More info modal"     
+        contentLabel="More info modal"
       >
-<Wrapper>
-        <Close
-           onClick={() => {
-            setIsOpenModalRegistration(false);
-           }}><svg width='32px' height='32px'>
-           <use xlinkHref={sprite + '#icon-close'} />
-       </svg> 
-         </Close>
+        <Wrapper>
+          <Close
+            onClick={() => {
+              setIsOpenModalRegistration(false);
+            }}
+          >
+            <svg width="32px" height="32px">
+              <use xlinkHref={sprite + '#icon-close'} />
+            </svg>
+          </Close>
 
-         <Title>Registration</Title>
+          <Title>Registration</Title>
 
-         <Text>Thank you for your interest in our platform! In order to register, we need some information. 
-            Please provide us with the following information</Text>
+          <Text>
+            Thank you for your interest in our platform! In order to register,
+            we need some information. Please provide us with the following
+            information
+          </Text>
 
-         <Registration/>
-</Wrapper>
-
+          <Registration />
+        </Wrapper>
       </Modal>
-      
-      </>
-    );
-  }; 
+    </>
+  );
+};

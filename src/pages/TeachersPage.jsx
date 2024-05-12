@@ -1,9 +1,8 @@
-import { Teachers } from "../components/Teachers/Teachers";
+import { Teachers } from '../components/Teachers/Teachers';
 export default function TeachersPage() {
-  
-    return (
-      <>
-        <Teachers/>
-      </>
-    );
+  return (
+    <>
+      <Teachers />
+    </>
+  );
 }

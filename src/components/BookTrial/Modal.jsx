@@ -1,78 +1,85 @@
-import Modal from "react-modal";
-import {BookForm} from './Form'; 
+import Modal from 'react-modal';
+import { Form } from './Form';
 import sprite from '../../assets/sprite.svg';
-import { Container,
-         SvgButton,
-         Title,
-         Text,
-         ContainerTeacher,
-         AvatarImg,
-         TextTeaher,
-         FullName } from "./Modal.styled";
+import {
+  Wrapper,
+  Button,
+  Title,
+  Desc,
+  Container,
+  Photo,
+  Text,
+  Name,
+} from './Modal.styled';
 
 Modal.setAppElement('#modal');
 
-export const ModalBookTrial = ({ isOpenModalBook, setIsOpenModalBook, avatar, name, surname }) => {
+export const ModalTrial = ({
+  isOpenModalBook,
+  setIsOpenModalBook,
+  avatar,
+  name,
+  surname,
+}) => {
+  const styles = {
+    overlay: {
+      backgroundColor: 'rgba(30, 66, 89, 0.4)',
+    },
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      padding: '20px',
+      maxWidth: '600px',
+      maxHeight: '672px',
+      borderRadius: '30px',
+    },
+  };
 
-    const customStyles = {
-      overlay: {
-        backgroundColor: "rgba(30, 66, 89, 0.4)",
-      },
-      content: {
-        top: "50%",
-        left: "50%",
-        right: "auto",
-        bottom: "auto",
-        marginRight: "-50%",
-        transform: "translate(-50%, -50%)",
-        padding: "20px",
-        maxWidth: "600px",
-        maxHeight: "972px",
-        borderRadius: "30px",
-      },
-    };
-    
-      return (
-        <>
-        <Modal   
-          isOpen={isOpenModalBook}
-          onRequestClose={() => {
-            setIsOpenModalBook(false);
-          }}
-               
-          style={customStyles}
-  
-          contentLabel="More info modal"     
-        >
+  return (
+    <>
+      <Modal
+        isOpen={isOpenModalBook}
+        onRequestClose={() => {
+          setIsOpenModalBook(false);
+        }}
+        style={styles}
+        contentLabel="More info modal"
+      >
+        <Wrapper>
+          <Button
+            onClick={() => {
+              setIsOpenModalBook(false);
+            }}
+          >
+            <svg width="32px" height="32px">
+              <use xlinkHref={sprite + '#icon-close'} />
+            </svg>
+          </Button>
 
-        <Container >
-            <SvgButton
-             onClick={() => {
-                setIsOpenModalBook(false);
-             }}>
-              <svg width= '32px' height='32px'>
-                  <use xlinkHref={sprite + '#icon-x'} />
-              </svg> 
-           </SvgButton>
+          <Title>Book trial lesson</Title>
 
-           <Title>Book trial lesson</Title>
+          <Desc>
+            Our experienced tutor will assess your current language level,
+            discuss your learning goals, and tailor the lesson to your specific
+            needs.
+          </Desc>
 
-           <Text>Our experienced tutor will assess your current language level, 
-            discuss your learning goals, and tailor the lesson to your specific needs.</Text>
-
-            <ContainerTeacher>
-               <AvatarImg src={avatar} alt="Avatar"/>
-               <div>
-                 <TextTeaher>Your teacher</TextTeaher>
-                 <FullName>{name} {surname}</FullName>
-               </div>
-            </ContainerTeacher>
-
-            <BookForm/>
-        </Container>
-
-        </Modal>
-        
-        </>
-      );
-    }; 
+          <Container>
+            <Photo src={avatar} alt="Avatar" />
+            <div>
+              <Text>Your teacher</Text>
+              <Name>
+                {name} {surname}
+              </Name>
+            </div>
+          </Container>
+          <Form />
+        </Wrapper>
+      </Modal>
+    </>
+  );
+};
