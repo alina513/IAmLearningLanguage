@@ -35,6 +35,7 @@ export const Teachers = () => {
   );
 
   const paginate = pageNumber => setCurrentPage(pageNumber);
+  
 
   const hasMoreData = teachers.length > indexOfLastTeacher;
 
