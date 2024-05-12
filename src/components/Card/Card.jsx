@@ -40,7 +40,6 @@ export const Card = ({ value }) => {
   const isFav = () => {
     const storedItems = JSON.parse(localStorage.getItem('storedItems')) || [];
     const itemIndex = storedItems.findIndex(item => item.name === value.name);
-    console.log('index', itemIndex);
     if (itemIndex !== -1) {
       setIsFavorite(true);
     }

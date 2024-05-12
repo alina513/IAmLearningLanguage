@@ -4,7 +4,6 @@ import { Card } from '../Card/Card';
 import { List } from './TeacherList.styled';
 
 export const TeachersList = ({ teachers }) => {
-  console.log(teachers);
   return (
     <List>
       {teachers.map(teacher => (

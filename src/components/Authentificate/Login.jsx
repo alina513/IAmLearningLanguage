@@ -30,7 +30,6 @@ export function Login() {
 
       dispatch(addToken(token));
       reset();
-      console.log('LOGIN', result.user.uid);
       return result.user;
     } catch (error) {
       throw error;
