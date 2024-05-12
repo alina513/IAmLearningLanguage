@@ -26,7 +26,7 @@ max-width: 968px;
 `
 export const ContainerLang = styled.div`
 display: flex;
-  gap: 192px;
+  gap: 92px;
 `
 
 export const TitleLang = styled.h3`
@@ -40,8 +40,14 @@ export const ListLanguage = styled.ul`
 display: flex;
 `
 export const ItemLanguage = styled.li`
+display: flex;
+flex-wrap: nowrap;
+width: 150px;
+justify-content: center;
+align-items: center;
+gap: 3px;
 height: 16px;
-padding: 0 16px 0 16px;
+padding: 0 6px 0 6px;
 border-right: solid 1px rgba(18, 20, 23, 0.2);
 color: #121417;
 font-size: 16px;
@@ -115,6 +121,7 @@ font-weight: 500;
 line-height: 114%;
 &:first-child {
   background-color: #F4C550;
+  border: none;
 }
 `
 export const Book = styled.button`

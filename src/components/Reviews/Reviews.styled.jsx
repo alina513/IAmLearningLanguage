@@ -23,6 +23,7 @@ width: 44px;
   height: 44px;
   border-radius: 100px;
   display: flex;
+  background-color: #FFC531;
 `
 export const ContainerReit = styled.div`
 `

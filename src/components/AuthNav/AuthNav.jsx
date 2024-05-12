@@ -1,7 +1,7 @@
 import { Registation, Container, Login } from "./AuthNav.styled";
-import { ModalRegisration } from "../Auth/ModalReg";
+import { ModalRegisration } from "../Authentificate/ModalReg";
 import { useState } from "react";
-import { ModalLogin } from "../Auth/ModalLog";
+import { ModalLogin } from "../Authentificate/ModalLog";
 import sprite from '../../assets/sprite.svg'
 
 

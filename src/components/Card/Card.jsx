@@ -20,17 +20,30 @@ import {
   Green,
   GreenContainer
 } from './Card.styled';
+import { ModalBookTrial } from '../BookTrial/Modal';
 import sprite from '../../assets/sprite.svg';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+// import { Outlet } from 'react-router-dom';
+import toast from 'react-hot-toast';
+import { selectIsLoggedIn } from '../../redux/selectors';
+import { useSelector } from 'react-redux';
+import { nanoid } from 'nanoid';
+import { Reviews } from '../Reviews/Reviews'
+
 
 
 export const Card = ({value}) => {
+  const userId = nanoid()
+
   const [isFavorite, setIsFavorite] = useState(false);
   const [showMore, setShowMore] = useState(true);
+  const [isOpenModalBook, setIsOpenModalBook] = useState(false);
+  const IsLoggedIn = useSelector(selectIsLoggedIn)
+  const notify = () => toast('You must log in');
   const isFav = ()=>{
-    const storedItems = JSON.parse(localStorage.getItem('storedItems')) || [];
+    // const storedItems = JSON.parse(localStorage.getItem('storedItems')) || [];
+    const storedItems = JSON.parse(localStorage.getItem(userId)) || [];
     const itemIndex = storedItems.findIndex(item => item.name === value.name);
     console.log("index",itemIndex);
     if (itemIndex!== -1) {
@@ -38,9 +51,21 @@ export const Card = ({value}) => {
     }
     return
   }
+
+  // useEffect(() => {
+  //   const storedShowBookButton = JSON.parse(localStorage.getItem('showBookButton'));
+  //   if (storedShowBookButton !== null) {
+  //     setShowMore(storedShowBookButton);
+  //   }
+  // }, []);
+
+  
+
   useEffect(() => {
     isFav()
-  },)
+  },[])
+
+  
 
 
   const toggleItemInLocalStorage = () => {
@@ -60,11 +85,13 @@ export const Card = ({value}) => {
         }
     }
     
-    localStorage.setItem('storedItems', JSON.stringify(storedItems));
+    // localStorage.setItem('storedItems', JSON.stringify(storedItems));
+    localStorage.setItem(userId, JSON.stringify(storedItems));
 };
 
 const handleReadMoreClick = () => {
   setShowMore(false);
+  // localStorage.setItem('showBookButton', JSON.stringify(false));
 };
   
 
@@ -80,43 +107,50 @@ const handleReadMoreClick = () => {
           <ContainerLang>
             <TitleLang>Languages</TitleLang>
             <ListLanguage>
-                <ItemLanguage>Lessons online</ItemLanguage>
-                <ItemLanguage>Lessons done:</ItemLanguage>
+                <ItemLanguage><svg width='16px' height='16px'>
+              <use xlinkHref={sprite + '#icon-book'} />
+          </svg>Lessons online</ItemLanguage>
+                <ItemLanguage>Lessons done:{value.lessons_done}</ItemLanguage>
                 <ItemLanguage><svg width='16px' height='16px'>
               <use xlinkHref={sprite + '#icon-star'} />
-          </svg>Rating: </ItemLanguage>
-                <ItemLanguage>Price / 1 hour:</ItemLanguage>
+          </svg>Rating: {value.rating}</ItemLanguage>
+                <ItemLanguage>Price / 1 hour: {value.price_per_hour}</ItemLanguage>
             </ListLanguage>
-            <HeartButton type='submit' onClick={toggleItemInLocalStorage}><svg width='26px' height='26px'>
-              <use xlinkHref={sprite + (isFavorite ?'#icon-heart-yellow' :'#icon-heart')} />
+            <HeartButton type='submit' onClick={IsLoggedIn ? toggleItemInLocalStorage : notify}><svg width='26px' height='26px'>
+              <use xlinkHref={sprite + (IsLoggedIn ? (isFavorite ?'#icon-heart-yellow' :'#icon-heart') : '#icon-heart' )} />
           </svg></HeartButton>
           </ContainerLang>
           <Name>{value.name}</Name>
           <ContainerItemText>
           <TitleText>Speaks:</TitleText>
-          <TextSpeaks> German, French</TextSpeaks>
+          <TextSpeaks> {value.languages}</TextSpeaks>
           </ContainerItemText>
           <ContainerItemText>
           <TitleText>Lesson Info:</TitleText>
-          <Text> Lesson Info</Text>
+          <Text> {value.lesson_info}</Text>
           </ContainerItemText>
           <ContainerItemText>
           <TitleText>Conditions: </TitleText>
-          <Text> German, French</Text>
+          <Text> {value.conditions}</Text>
           </ContainerItemText>
           {showMore && <ReadMore to="reviews" onClick={handleReadMoreClick}>Read more</ReadMore>}
-          <Outlet/>
+          {/* <Outlet /> */}
+          {!showMore && <Reviews value = {value}/>}
           <ListLevel>
-            <ItemLevel>
-            #A1 Beginner
-            </ItemLevel>
-            <ItemLevel>
-            #A1 Beginner
-            </ItemLevel>
+            {value.levels.map( level => <ItemLevel key = {nanoid()}>{level}</ItemLevel>)}
           </ListLevel>
-          {!showMore&&<Book>Book trial lesson</Book>}
+          {!showMore&&<Book onClick={() => {
+              setIsOpenModalBook(true);}}>Book trial lesson</Book>}
         </ContainerText>
       </ContainerPhoto>
+      <ModalBookTrial 
+                isOpenModalBook={isOpenModalBook} 
+                setIsOpenModalBook={setIsOpenModalBook}
+                avatar={value.avatar_url} 
+                name={value.name} 
+                surname={value.surname}
+                />
+
     </Wrapper>
   );
 };
