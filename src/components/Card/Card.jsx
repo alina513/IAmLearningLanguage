@@ -56,7 +56,7 @@ export const Card = ({ value }) => {
 
   useEffect(() => {
     isFav();
-  }, []);
+  }, );
 
   const toggleItemInLocalStorage = () => {
     const storedItems = JSON.parse(localStorage.getItem('storedItems')) || [];
