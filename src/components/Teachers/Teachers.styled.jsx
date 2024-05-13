@@ -23,3 +23,8 @@ export const LoadMore = styled.button`
 export const Wrapper = styled.div`
   padding: 0px 128px 96px 128px;
 `;
+
+export const Text = styled.h2`
+margin: 100px auto 50px auto;
+color: red;
+`
