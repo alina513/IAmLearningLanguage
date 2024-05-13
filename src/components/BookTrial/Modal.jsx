@@ -45,6 +45,7 @@ export const ModalTrial = ({
         isOpen={isOpenModalBook}
         onRequestClose={() => {
           setIsOpenModalBook(false);
+          document.body.classList.remove('modal-open');
         }}
         style={styles}
         contentLabel="More info modal"
@@ -53,6 +54,7 @@ export const ModalTrial = ({
           <Button
             onClick={() => {
               setIsOpenModalBook(false);
+              document.body.classList.remove('modal-open');
             }}
           >
             <svg width="32px" height="32px">

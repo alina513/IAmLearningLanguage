@@ -9,8 +9,16 @@ export const Book = styled.button`
   width: 100%;
   height: 60px;
 
+  color: #121417;
+  font-size: 18px;
+  font-weight: 700;
+
   background-color: #f4c550;
   border-radius: 12px;
+  &:hover,
+  &:focus {
+    background-color: #f4c8ba;
+  }
 `;
 
 export const Input = styled.input`

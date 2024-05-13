@@ -101,6 +101,10 @@ export const ReadMore = styled(NavLink)`
   line-height: 100%;
   text-decoration: underline;
   margin-bottom: 32px;
+  &:hover,
+  &:focus {
+    color: #f4c8ba;
+  }
 `;
 export const ListLevel = styled.ul`
   display: flex;

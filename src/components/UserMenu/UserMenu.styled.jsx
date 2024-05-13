@@ -16,4 +16,10 @@ export const LogOut = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  &:hover,
+  &:focus {
+    background-color: #f4c8ba;
+    color: black;
+    border: none;
+  }
 `;

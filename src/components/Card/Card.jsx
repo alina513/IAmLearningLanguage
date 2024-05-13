@@ -36,7 +36,7 @@ export const Card = ({ value }) => {
   const [showMore, setShowMore] = useState(true);
   const [isOpenModalBook, setIsOpenModalBook] = useState(false);
   const IsLoggedIn = useSelector(selectIsLoggedIn);
-  const notify = () => toast('You must log in');
+  const notify = () => toast.error('You must log in');
   const isFav = () => {
     const storedItems = JSON.parse(localStorage.getItem('storedItems')) || [];
     const itemIndex = storedItems.findIndex(item => item.name === value.name);
@@ -157,6 +157,7 @@ export const Card = ({ value }) => {
             <Book
               onClick={() => {
                 setIsOpenModalBook(true);
+                document.body.classList.add('modal-open');
               }}
             >
               Book trial lesson

@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
 import { Layout } from '../components/Layout';
 import { Reviews } from '../components/Reviews/Reviews';
+import {PrivateRoute} from '../helpers/Privaateroute';
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const TeachersPage = lazy(() => import('../pages/TeachersPage'));
@@ -16,11 +17,14 @@ export const App = () => {
         <Route path="/teachers" element={<TeachersPage />}>
           <Route path="reviews" element={<Reviews />} />
         </Route>
-        <Route path="/favorites" element={<FavoritesPage />} />
+        <Route
+          path="/favorites"
+          element={
+            <PrivateRoute redirectTo="/" component={<FavoritesPage />} />
+          }
+        />
         <Route path="*" element={<HomePage />} />
       </Route>
     </Routes>
   );
 };
-
-

@@ -5,6 +5,7 @@ import { Error, Input, Button } from './Login.styled';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../firebase';
 import { addToken } from '../../redux/authSlice';
+import toast from 'react-hot-toast';
 
 const SignupSchema = Yup.object().shape({
   email: Yup.string().email('example@com.ua').required('Required'),
@@ -12,6 +13,7 @@ const SignupSchema = Yup.object().shape({
 });
 
 export function Login() {
+  const notify = () => toast.error('You password or email is wrong');
   const dispatch = useDispatch();
 
   const {
@@ -32,6 +34,7 @@ export function Login() {
       reset();
       return result.user;
     } catch (error) {
+      notify();
       throw error;
     }
   };

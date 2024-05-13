@@ -15,11 +15,18 @@ export const Input = styled.input`
 export const Button = styled.button`
   width: 100%;
   height: 60px;
+  color: #121417;
+  font-size: 18px;
+  font-weight: 700;
   background-color: #f4c550;
   margin-top: 20px;
   text-align: center;
   border-radius: 12px;
   border: none;
+  &:hover,
+  &:focus {
+    background-color: #f4c8ba;
+  }
 `;
 
 export const Error = styled.p`
