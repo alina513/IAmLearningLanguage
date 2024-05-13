@@ -25,9 +25,9 @@ export const Teachers = () => {
     fetchData();
   }, [dispatch]);
 
-  const indexOfFirstTeacher = (currentPage - 1) * teachersPerPage;
+  const indexOfFirstTeacher = 0;
 
-  const indexOfLastTeacher = indexOfFirstTeacher + teachersPerPage;
+  const indexOfLastTeacher = ((currentPage - 1) * teachersPerPage) + teachersPerPage;
 
   const currentTeachers = teachers.slice(
     indexOfFirstTeacher,
@@ -49,3 +49,5 @@ export const Teachers = () => {
     </Wrapper>
   );
 };
+
+
