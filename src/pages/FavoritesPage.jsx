@@ -2,6 +2,7 @@ import { FavoriteList } from '../components/FavoriteList/FavoriteList';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Empty } from '../components/Empty/Empty';
+import { Wrapper } from '../components/Teachers/Teachers.styled';
 
 export default function FavoritesPage() {
   const [favorites, setFavorites] = useState([]);
@@ -15,12 +16,12 @@ export default function FavoritesPage() {
   }, []);
 
   return (
-    <>
+    <Wrapper>
       {favorites.length !== 0 ? (
         <FavoriteList favorites={favorites} />
       ) : (
         <Empty></Empty>
       )}
-    </>
+    </Wrapper>
   );
 }

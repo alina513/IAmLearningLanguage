@@ -2,6 +2,9 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   gap: 16px;
+  @media (max-width: 450px) {
+    display: block;
+  }
 `;
 
 export const Registation = styled.button`

@@ -6,10 +6,14 @@ export const Wrapper = styled.div`
   background-color: #ffffff;
   padding: 24px;
   margin-top: 32px;
+  position: relative;
 `;
 export const ContainerPhoto = styled.div`
   display: flex;
   gap: 48px;
+  @media (max-width: 1158px) {
+    display: block;
+  }
 `;
 export const Photo = styled.img`
   width: 120px;
@@ -28,6 +32,9 @@ export const ContainerText = styled.div`
 export const ContainerLang = styled.div`
   display: flex;
   gap: 92px;
+  @media (max-width: 971px) {
+    display: block;
+  }
 `;
 
 export const TitleLang = styled.h3`
@@ -35,10 +42,16 @@ export const TitleLang = styled.h3`
   font-size: 16px;
   font-weight: 500;
   line-height: 150%;
+  @media (max-width: 971px) {
+    margin-bottom: 20px;
+  }
 `;
 
 export const ListLanguage = styled.ul`
   display: flex;
+  @media (max-width: 714px) {
+    display: block;
+  }
 `;
 export const ItemLanguage = styled.li`
   display: flex;
@@ -56,6 +69,9 @@ export const ItemLanguage = styled.li`
   line-height: 150%;
   &:last-child {
     border-right: none;
+  }
+  @media (max-width: 714px) {
+    margin-bottom: 20px;
   }
 `;
 export const Name = styled.h2`
@@ -109,6 +125,9 @@ export const ReadMore = styled(NavLink)`
 export const ListLevel = styled.ul`
   display: flex;
   gap: 8px;
+  @media (max-width: 714px) {
+    display: block;
+  }
 `;
 export const ItemLevel = styled.li`
   // width: 133px;
@@ -127,6 +146,9 @@ export const ItemLevel = styled.li`
   &:first-child {
     background-color: #f4c550;
     border: none;
+  }
+  @media (max-width: 714px) {
+    margin-bottom: 20px;
   }
 `;
 export const Book = styled.button`
@@ -151,14 +173,24 @@ margin-bottom; 24px;
 export const HeartButton = styled.button`
   border: none;
   background-color: #ffffff;
+  @media (max-width: 1158px) {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
 `;
 export const GreenContainer = styled.div`
   position: relative;
-`;
+ 
+`
+
 export const Green = styled.svg`
   position: absolute;
   top: 25px;
   right: 30px;
+  @media (max-width: 1158px) {
+    display: none;
+  }
 `;
 
 export const PriceSpan = styled.span`

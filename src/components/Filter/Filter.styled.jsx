@@ -3,6 +3,11 @@ import styled from 'styled-components';
 export const Form = styled.form`
   display: flex;
   gap: 20px;
+  @media (max-width: 545px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
 `;
 export const Wrapper = styled.div`
   display: flex;

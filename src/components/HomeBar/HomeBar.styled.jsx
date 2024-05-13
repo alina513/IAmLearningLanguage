@@ -3,11 +3,14 @@ import { NavLink } from 'react-router-dom';
 
 export const Wrapper = styled.div`
   max-width: 720px;
-  nmax-height: 530px;
+  max-height: 530px;
   background-color: #eeeeee;
   border-radius: 30px;
   padding: 98px 64px;
   box-sizing: border-box;
+  @media (max-width: 1430px) {
+    margin-top: 10px;
+  }
 `;
 export const Title = styled.h1`
   font-size: 48px;
@@ -15,12 +18,23 @@ export const Title = styled.h1`
   line-heigt: 117%;
   max-width: 568px;
   margin-bottom: 32px;
+  @media (max-width: 572px) {
+    font-size: 36px;
+    width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 `;
 export const Text = styled.p`
   font-size: 16px;
   line-heigt: 138%;
   max-width: 471px;
   margin-bottom: 64px;
+  @media (max-width: 572px) {
+    width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 `;
 export const Link = styled(NavLink)`
   display: flex;
@@ -36,6 +50,10 @@ export const Link = styled(NavLink)`
   &:hover,
   &:focus {
     background-color: #f4c8ba;
+  }
+  @media (max-width: 572px) {
+    margin-right: auto;
+    margin-left: auto;
   }
 `;
 export const Span = styled.span`

@@ -22,6 +22,10 @@ export const LoadMore = styled.button`
 `;
 export const Wrapper = styled.div`
   padding: 0px 128px 96px 128px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Text = styled.h2`

@@ -10,6 +10,17 @@ export const Container = styled.div`
   padding: 40px 123px;
   gap: 100px;
   margin-top: 25px;
+  @media (max-width: 1430px) {
+    background-color: #FFFFFF;
+  }
+  @media (max-width: 1340px) {
+    gap: 10px;
+    width: 100vw;;
+  }
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 export const ContainerStat = styled.div`
   display: flex;

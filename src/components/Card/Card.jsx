@@ -46,13 +46,6 @@ export const Card = ({ value }) => {
     return;
   };
 
-  // useEffect(() => {
-  //   const storedShowBookButton = JSON.parse(localStorage.getItem('showBookButton'));
-  //   if (storedShowBookButton !== null) {
-  //     setShowMore(storedShowBookButton);
-  //   }
-  // }, []);
-
   useEffect(() => {
     isFav();
   }, );
@@ -75,6 +68,7 @@ export const Card = ({ value }) => {
     }
 
     localStorage.setItem('storedItems', JSON.stringify(storedItems));
+    // window.location.reload(); 
   };
 
   const handleReadMoreClick = () => {

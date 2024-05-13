@@ -6,10 +6,24 @@ export const Container = styled.div`
   justify-content: space-between;
   // gap: 390px;
   width: 661px;
+  @media (max-width: 1096px) {
+    width: 100vw;
+  }
+  @media (max-width: 525px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+  }
+  
 `;
 export const ContainerNav = styled.div`
   display: flex;
   gap: 28px;
+  @media (max-width: 600px) {
+    flex-direction: column; 
+    gap: 3px;
+    margin-left: 10px;
+  }
 `;
 
 export const LinkNav = styled(NavLink)`
@@ -42,5 +56,8 @@ export const LinkLogo = styled(Link)`
   &:hover,
   &:focus {
     color: #f4c8ba;
+  }
+  @media (max-width: 1096px) {
+    font-size: 16px;
   }
 `;
