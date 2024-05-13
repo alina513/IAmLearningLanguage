@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/IAmLearningLanguage/static/css/main.16221586.css",
-    "main.js": "/IAmLearningLanguage/static/js/main.666d4a33.js",
+    "main.js": "/IAmLearningLanguage/static/js/main.3b0d1b8b.js",
     "static/js/552.06319e3e.chunk.js": "/IAmLearningLanguage/static/js/552.06319e3e.chunk.js",
-    "static/js/478.53c9207f.chunk.js": "/IAmLearningLanguage/static/js/478.53c9207f.chunk.js",
+    "static/js/478.9c552a22.chunk.js": "/IAmLearningLanguage/static/js/478.9c552a22.chunk.js",
     "static/js/504.7f36e718.chunk.js": "/IAmLearningLanguage/static/js/504.7f36e718.chunk.js",
     "static/media/girl-2x.png": "/IAmLearningLanguage/static/media/girl-2x.f9c351340c3f4e98803c.png",
     "static/media/girl-1x.png": "/IAmLearningLanguage/static/media/girl-1x.41f7df7cae9f0a2a727a.png",
@@ -12,13 +12,13 @@
     "static/media/sprite.svg": "/IAmLearningLanguage/static/media/sprite.9cecfcfeac412e836e1ab3aaa44303b4.svg",
     "index.html": "/IAmLearningLanguage/index.html",
     "main.16221586.css.map": "/IAmLearningLanguage/static/css/main.16221586.css.map",
-    "main.666d4a33.js.map": "/IAmLearningLanguage/static/js/main.666d4a33.js.map",
+    "main.3b0d1b8b.js.map": "/IAmLearningLanguage/static/js/main.3b0d1b8b.js.map",
     "552.06319e3e.chunk.js.map": "/IAmLearningLanguage/static/js/552.06319e3e.chunk.js.map",
-    "478.53c9207f.chunk.js.map": "/IAmLearningLanguage/static/js/478.53c9207f.chunk.js.map",
+    "478.9c552a22.chunk.js.map": "/IAmLearningLanguage/static/js/478.9c552a22.chunk.js.map",
     "504.7f36e718.chunk.js.map": "/IAmLearningLanguage/static/js/504.7f36e718.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.16221586.css",
-    "static/js/main.666d4a33.js"
+    "static/js/main.3b0d1b8b.js"
   ]
 }
