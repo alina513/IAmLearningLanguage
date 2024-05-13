@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/IAmLearningLanguage/static/css/main.16221586.css",
-    "main.js": "/IAmLearningLanguage/static/js/main.686a2a18.js",
+    "main.css": "/IAmLearningLanguage/static/css/main.30f4c149.css",
+    "main.js": "/IAmLearningLanguage/static/js/main.d143f0a9.js",
     "static/js/552.06319e3e.chunk.js": "/IAmLearningLanguage/static/js/552.06319e3e.chunk.js",
-    "static/js/478.7b498f11.chunk.js": "/IAmLearningLanguage/static/js/478.7b498f11.chunk.js",
-    "static/js/504.57d8c0b4.chunk.js": "/IAmLearningLanguage/static/js/504.57d8c0b4.chunk.js",
+    "static/js/478.dad8d632.chunk.js": "/IAmLearningLanguage/static/js/478.dad8d632.chunk.js",
+    "static/js/504.dd46c9fa.chunk.js": "/IAmLearningLanguage/static/js/504.dd46c9fa.chunk.js",
     "static/media/girl-2x.png": "/IAmLearningLanguage/static/media/girl-2x.f9c351340c3f4e98803c.png",
     "static/media/girl-1x.png": "/IAmLearningLanguage/static/media/girl-1x.41f7df7cae9f0a2a727a.png",
     "static/media/Mac-2x.png": "/IAmLearningLanguage/static/media/Mac-2x.1df8c52840b1fe81b63c.png",
     "static/media/Mac-1x.png": "/IAmLearningLanguage/static/media/Mac-1x.bceb34615c4c4e3bd5ba.png",
     "static/media/sprite.svg": "/IAmLearningLanguage/static/media/sprite.9cecfcfeac412e836e1ab3aaa44303b4.svg",
     "index.html": "/IAmLearningLanguage/index.html",
-    "main.16221586.css.map": "/IAmLearningLanguage/static/css/main.16221586.css.map",
-    "main.686a2a18.js.map": "/IAmLearningLanguage/static/js/main.686a2a18.js.map",
+    "main.30f4c149.css.map": "/IAmLearningLanguage/static/css/main.30f4c149.css.map",
+    "main.d143f0a9.js.map": "/IAmLearningLanguage/static/js/main.d143f0a9.js.map",
     "552.06319e3e.chunk.js.map": "/IAmLearningLanguage/static/js/552.06319e3e.chunk.js.map",
-    "478.7b498f11.chunk.js.map": "/IAmLearningLanguage/static/js/478.7b498f11.chunk.js.map",
-    "504.57d8c0b4.chunk.js.map": "/IAmLearningLanguage/static/js/504.57d8c0b4.chunk.js.map"
+    "478.dad8d632.chunk.js.map": "/IAmLearningLanguage/static/js/478.dad8d632.chunk.js.map",
+    "504.dd46c9fa.chunk.js.map": "/IAmLearningLanguage/static/js/504.dd46c9fa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.16221586.css",
-    "static/js/main.686a2a18.js"
+    "static/css/main.30f4c149.css",
+    "static/js/main.d143f0a9.js"
   ]
 }
