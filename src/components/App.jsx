@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
 import { Layout } from '../components/Layout';
-import { Reviews } from '../components/Reviews/Reviews';
+// import { Reviews } from '../components/Reviews/Reviews';
 // import {PrivateRoute} from '../helpers/Privaateroute';
 import { auth } from '../firebase';
 import { useDispatch } from 'react-redux';
