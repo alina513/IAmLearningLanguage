@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 export const Wrapper = styled.div`
   max-width: 1184px;
   border-radius: 24px;
@@ -108,12 +108,14 @@ export const ContainerItemText = styled.div`
   align-items: center;
   margin-bottom: 8px;
 `;
-export const ReadMore = styled(NavLink)`
+export const ReadMore = styled.button`
   display: flex;
   margin-top: 16px;
+  border: none;
+  background-color: #ffffff;
   color: #121417;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 100%;
   text-decoration: underline;
   margin-bottom: 32px;

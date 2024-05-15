@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
 import { Layout } from '../components/Layout';
 import { Reviews } from '../components/Reviews/Reviews';
-import {PrivateRoute} from '../helpers/Privaateroute';
+// import {PrivateRoute} from '../helpers/Privaateroute';
 import { auth } from '../firebase';
 import { useDispatch } from 'react-redux';
 import { onAuthStateChanged } from 'firebase/auth';
@@ -35,14 +35,15 @@ export const App = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="/teachers" element={<TeachersPage />}>
-          <Route path="reviews" element={<Reviews />} />
+          {/* <Route path="reviews" element={<Reviews />} /> */}
         </Route>
-        <Route
+        <Route path="/favorites" element={<FavoritesPage />} />
+        {/* <Route
           path="/favorites"
           element={
             <PrivateRoute redirectTo="/" component={<FavoritesPage />} />
           }
-        />
+        /> */}
         <Route path="*" element={<HomePage />} />
       </Route>
     </Routes>

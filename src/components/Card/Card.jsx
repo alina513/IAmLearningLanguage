@@ -137,7 +137,7 @@ export const Card = ({ value }) => {
             <Text> {value.conditions}</Text>
           </ContainerItemText>
           {showMore && (
-            <ReadMore to="reviews" onClick={handleReadMoreClick}>
+            <ReadMore  onClick={handleReadMoreClick}>
               Read more
             </ReadMore>
           )}
