@@ -1,3 +1,5 @@
+
+
 import { useForm } from 'react-hook-form';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
@@ -32,6 +34,7 @@ export function Login() {
 
       dispatch(addToken(token));
       reset();
+      console.log(result.user)
       return result.user;
     } catch (error) {
       notify();
@@ -61,3 +64,4 @@ export function Login() {
     </form>
   );
 }
+

@@ -68,7 +68,7 @@ export const Card = ({ value }) => {
     }
 
     localStorage.setItem('storedItems', JSON.stringify(storedItems));
-    // window.location.reload(); 
+    window.location.reload(); 
   };
 
   const handleReadMoreClick = () => {
