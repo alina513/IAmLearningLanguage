@@ -19,8 +19,8 @@ export const Navigation = () => {
         LearnLingo
       </LinkLogo>
       <ContainerNav>
-        <LinkNav to="/">Home</LinkNav>
-        <LinkNav to="/teachers">Teachers</LinkNav>
+        {isLoggedIn && <LinkNav to="/">Home</LinkNav>}
+       {isLoggedIn && <LinkNav to="/teachers">Teachers</LinkNav>}
         {isLoggedIn && <LinkNav to="/favorites">Favorites</LinkNav>}
       </ContainerNav>
     </Container>

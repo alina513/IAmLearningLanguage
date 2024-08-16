@@ -8,11 +8,11 @@ export const Container = styled.div`
 `;
 
 export const Registation = styled.button`
-  width: 166px;
+  width: 80px;
   height: 48px;
   border-radius: 12px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 10px;
   line-height: 125%;
   color: #ffffff;
   background-color: #121417;
@@ -25,10 +25,15 @@ export const Registation = styled.button`
     color: black;
     border: none;
   }
+  @media (min-width: 1096px) {
+    font-size: 16px;
+    width: 166px;
+  }
+
 `;
 export const Login = styled.button`
   font-weight: 700;
-  font-size: 16px;
+  font-size: 10px;
   line-height: 125%;
   color: #121417;
   background-color: #f8f8f8;
@@ -40,5 +45,8 @@ export const Login = styled.button`
   &:hover,
   &:focus {
     color: #f4c8ba;
+  }
+  @media (min-width: 1096px) {
+    font-size: 16px;
   }
 `;
