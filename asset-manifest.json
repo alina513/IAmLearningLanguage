@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/IAmLearningLanguage/static/css/main.30f4c149.css",
-    "main.js": "/IAmLearningLanguage/static/js/main.e5283169.js",
+    "main.js": "/IAmLearningLanguage/static/js/main.e6f2117d.js",
     "static/js/552.1fa4b977.chunk.js": "/IAmLearningLanguage/static/js/552.1fa4b977.chunk.js",
     "static/js/215.ba4248de.chunk.js": "/IAmLearningLanguage/static/js/215.ba4248de.chunk.js",
     "static/js/504.daf90778.chunk.js": "/IAmLearningLanguage/static/js/504.daf90778.chunk.js",
@@ -13,7 +13,7 @@
     "static/media/sprite.svg": "/IAmLearningLanguage/static/media/sprite.9cecfcfeac412e836e1ab3aaa44303b4.svg",
     "index.html": "/IAmLearningLanguage/index.html",
     "main.30f4c149.css.map": "/IAmLearningLanguage/static/css/main.30f4c149.css.map",
-    "main.e5283169.js.map": "/IAmLearningLanguage/static/js/main.e5283169.js.map",
+    "main.e6f2117d.js.map": "/IAmLearningLanguage/static/js/main.e6f2117d.js.map",
     "552.1fa4b977.chunk.js.map": "/IAmLearningLanguage/static/js/552.1fa4b977.chunk.js.map",
     "215.ba4248de.chunk.js.map": "/IAmLearningLanguage/static/js/215.ba4248de.chunk.js.map",
     "504.daf90778.chunk.js.map": "/IAmLearningLanguage/static/js/504.daf90778.chunk.js.map",
@@ -21,6 +21,6 @@
   },
   "entrypoints": [
     "static/css/main.30f4c149.css",
-    "static/js/main.e5283169.js"
+    "static/js/main.e6f2117d.js"
   ]
 }
