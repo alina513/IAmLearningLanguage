@@ -1,5 +1,8 @@
 import { Wrapper, Link, Text, Title, Span } from './HomeBar.styled';
+import { selectIsLoggedIn } from '../../redux/selectors';
+import { useSelector } from 'react-redux';
 export const HomeBar = () => {
+  const isLoggedIn = useSelector(selectIsLoggedIn)
   return (
     <>
       <Wrapper>
@@ -11,7 +14,7 @@ export const HomeBar = () => {
           Elevate your language proficiency to new heights by connecting with
           highly qualified and experienced tutors.
         </Text>
-        <Link to="">Get started</Link>
+       {isLoggedIn && <Link to="/teachers">Get started</Link>}
       </Wrapper>
     </>
   );
