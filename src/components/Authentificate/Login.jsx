@@ -34,7 +34,6 @@ export function Login() {
 
       dispatch(addToken(token));
       reset();
-      console.log(result.user)
       return result.user;
     } catch (error) {
       notify();

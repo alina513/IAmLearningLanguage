@@ -11,7 +11,7 @@ export const HomeBar = () => {
           Elevate your language proficiency to new heights by connecting with
           highly qualified and experienced tutors.
         </Text>
-        <Link to="/teachers">Get started</Link>
+        <Link to="">Get started</Link>
       </Wrapper>
     </>
   );

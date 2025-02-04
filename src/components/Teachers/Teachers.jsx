@@ -33,18 +33,18 @@ export const Teachers = () => {
   const indexOfLastTeacher =
     (currentPage - 1) * teachersPerPage + teachersPerPage;
 
-  const currentTeachers = teachers.slice(
+  const currentTeachers = teachers?.slice(
     indexOfFirstTeacher,
     indexOfLastTeacher
   );
 
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
-  const hasMoreData = teachers.length > indexOfLastTeacher;
+  const hasMoreData = teachers?.length > indexOfLastTeacher;
 
   const { languages, levels, prices } = filter;
 
-  const searchTeachers = teachers.filter(teacher => {
+  const searchTeachers = teachers?.filter(teacher => {
     if (!languages && !levels && !prices) {
       return true;
     }
