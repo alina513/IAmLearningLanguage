@@ -14,7 +14,7 @@ const SignupSchema = Yup.object().shape({
   password: Yup.string().min(6, 'Must be min 6 symbols').required('Required'),
 });
 
-export function Login() {
+export function Login({setIsOpenModalLogin}) {
   const notify = () => toast.error('You password or email is wrong');
   const dispatch = useDispatch();
 
@@ -34,6 +34,7 @@ export function Login() {
 
       dispatch(addToken(token));
       reset();
+      setIsOpenModalLogin(false);
       return result.user;
     } catch (error) {
       notify();

@@ -6,7 +6,6 @@ import {
 } from './HomeStatistice.styled';
 export const HomeStatistice = () => {
   return (
-    <>
       <Container>
         <ContainerStat>
           <Number>32,000 +</Number>
@@ -25,6 +24,5 @@ export const HomeStatistice = () => {
           <Description>Tutor nationalities</Description>
         </ContainerStat>
       </Container>
-    </>
   );
 };

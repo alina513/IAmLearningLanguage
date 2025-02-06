@@ -1,8 +1,8 @@
 import { Registation, Container, Login } from './AuthNav.styled';
-import { ModalRegisration } from '../Authentificate/ModalReg';
+import { ModalRegisration } from '../../Authentificate/ModalReg';
 import { useState } from 'react';
-import { ModalLogin } from '../Authentificate/ModalLog';
-import sprite from '../../assets/sprite.svg';
+import { ModalLogin } from '../../Authentificate/ModalLog';
+import sprite from '../../../assets/sprite.svg';
 
 export const AuthNav = () => {
   const [isOpenModalLogin, setIsOpenModalLogin] = useState(false);
