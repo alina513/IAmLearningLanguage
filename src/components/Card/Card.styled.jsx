@@ -87,6 +87,7 @@ export const ItemLanguage = styled.li`
     margin-bottom: 0px;
   }
   @media (min-width: 1440px) {
+  width: 160px;
     gap: 7px;
     font-size: 16px;
   }
