@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 export const Descr = styled.p`
   color: #121417;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 135%;
+  @media (min-width: 769px) {
+    font-size: 16px;
+  }
 `;
 
 export const RevList = styled.ul``;
@@ -27,23 +30,32 @@ export const ContainerReit = styled.div``;
 
 export const Reiting = styled.p`
   color: #121417;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 135%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3px;
+  @media (min-width: 769px) {
+    font-size: 14px;
+  }
 `;
 export const Name = styled.h3`
   color: #8a8a89;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 135%;
+  @media (min-width: 769px) {
+    font-size: 16px;
+  }
 `;
 export const Rew = styled.p`
   color: #121417;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 135%;
+  @media (min-width: 769px) {
+    font-size: 16px;
+  }
 `;

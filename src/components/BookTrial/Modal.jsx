@@ -79,7 +79,7 @@ export const ModalTrial = ({
               </Name>
             </div>
           </Container>
-          <Form />
+          <Form  setIsOpenModalBook = {setIsOpenModalBook}/>
         </Wrapper>
       </Modal>
     </>

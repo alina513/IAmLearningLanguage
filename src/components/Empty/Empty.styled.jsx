@@ -8,8 +8,11 @@ export const Container = styled.div`
   align-items: center;
 `;
 export const Text = styled.p`
-  font-size: 32px;
+  font-size: 18px;
   line-height: 1.5;
   color: red;
   font-width: 700;
+  @media (min-width: 769px) {
+   font-size: 32px;
+  }
 `;

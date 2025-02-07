@@ -30,7 +30,7 @@ const values = [
   { name: 'Culture, travel or hobby', id: '5', value: 'cultureTravelOrHobby' },
 ];
 
-export function Form() {
+export function Form({setIsOpenModalBook}) {
   const {
     register,
     handleSubmit,
@@ -39,8 +39,8 @@ export function Form() {
   } = useForm({ validationSchema: SignupSchema });
 
   const onSubmit = data => {
-    console.log(data);
     reset();
+    setIsOpenModalBook(false);
   };
 
   return (
