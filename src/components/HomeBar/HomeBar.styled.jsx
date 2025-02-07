@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   padding: 98px 64px;
   box-sizing: border-box;
   @media (min-width: 1440px) {
-   width: 720px;
+    width: 720px;
   }
 `;
 export const Title = styled.h1`
@@ -21,10 +21,10 @@ export const Title = styled.h1`
   margin-bottom: 12px;
   @media (min-width: 1440px) {
     font-size: 48px;
-  font-weight: 500;
-  line-heigt: 117%;
-  max-width: 568px;
-  margin-bottom: 32px;
+    font-weight: 500;
+    line-heigt: 117%;
+    max-width: 568px;
+    margin-bottom: 32px;
   }
 `;
 export const Text = styled.p`
@@ -33,7 +33,6 @@ export const Text = styled.p`
   margin-bottom: 64px;
   margin-right: auto;
   margin-left: auto;
-
 `;
 export const Link = styled(NavLink)`
   display: flex;
@@ -50,8 +49,7 @@ export const Link = styled(NavLink)`
   &:focus {
     background-color: #f4c8ba;
   }
-    max-width: 267px;
-  
+  max-width: 267px;
 `;
 export const Span = styled.span`
   background-color: #e0a39a;
@@ -77,6 +75,7 @@ export const Button = styled.button`
   &:focus {
     background-color: #f4c8ba;
     @media (min-width: 1440px) {
-    width: 267px;
+      width: 267px;
     }
-  }`
+  }
+`;

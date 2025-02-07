@@ -48,7 +48,7 @@ export const Card = ({ value }) => {
 
   useEffect(() => {
     isFav();
-  }, );
+  });
 
   const toggleItemInLocalStorage = () => {
     const storedItems = JSON.parse(localStorage.getItem('storedItems')) || [];
@@ -68,7 +68,7 @@ export const Card = ({ value }) => {
     }
 
     localStorage.setItem('storedItems', JSON.stringify(storedItems));
-    window.location.reload(); 
+    window.location.reload();
   };
 
   const handleReadMoreClick = () => {
@@ -137,9 +137,7 @@ export const Card = ({ value }) => {
             <Text> {value.conditions}</Text>
           </ContainerItemText>
           {showMore && (
-            <ReadMore  onClick={handleReadMoreClick}>
-              Read more
-            </ReadMore>
+            <ReadMore onClick={handleReadMoreClick}>Read more</ReadMore>
           )}
           {!showMore && <Reviews value={value} />}
           <ListLevel>

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { ModalLogin } from '../Authentificate/ModalLog';
 import { useState } from 'react';
 export const HomeBar = () => {
-  const isLoggedIn = useSelector(selectIsLoggedIn)
+  const isLoggedIn = useSelector(selectIsLoggedIn);
   const [isOpenModalLogin, setIsOpenModalLogin] = useState(false);
   return (
     <>
@@ -17,7 +17,11 @@ export const HomeBar = () => {
           Elevate your language proficiency to new heights by connecting with
           highly qualified and experienced tutors.
         </Text>
-       {isLoggedIn ? <Link to="/teachers">Get started</Link> :<Button onClick={() => setIsOpenModalLogin(true)}>Log in</Button>}
+        {isLoggedIn ? (
+          <Link to="/teachers">Get started</Link>
+        ) : (
+          <Button onClick={() => setIsOpenModalLogin(true)}>Log in</Button>
+        )}
       </Wrapper>
       <ModalLogin
         isOpenModalLogin={isOpenModalLogin}

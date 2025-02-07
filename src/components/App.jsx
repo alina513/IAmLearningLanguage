@@ -1,16 +1,12 @@
-
-
 import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
 import { Layout } from '../components/Layout';
 import { Reviews } from '../components/Reviews/Reviews';
-// import {PrivateRoute} from '../helpers/Privaateroute';
 import { auth } from '../firebase';
 import { useDispatch } from 'react-redux';
 import { onAuthStateChanged } from 'firebase/auth';
 import { addToken } from '../redux/authSlice';
-
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const TeachersPage = lazy(() => import('../pages/TeachersPage'));
@@ -22,14 +18,16 @@ export const App = () => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, user => {
       if (user) {
-        dispatch(addToken({ email: user.email, accessToken: user.accessToken }));
+        dispatch(
+          addToken({ email: user.email, accessToken: user.accessToken })
+        );
       }
     });
-
     return () => {
       unsubscribe();
     };
   }, [dispatch]);
+  
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -38,16 +36,8 @@ export const App = () => {
           <Route path="reviews" element={<Reviews />} />
         </Route>
         <Route path="/favorites" element={<FavoritesPage />} />
-        {/* <Route
-          path="/favorites"
-          element={
-            <PrivateRoute redirectTo="/" component={<FavoritesPage />} />
-          }
-        /> */}
         <Route path="*" element={<HomePage />} />
       </Route>
     </Routes>
   );
 };
-
-

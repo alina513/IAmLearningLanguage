@@ -8,23 +8,22 @@ export const Container = styled.div`
   gap: 10px;
   margin-top: 25px;
   @media (min-width: 769px) {
-  width: 724px;
-  gap: 80px;
+    width: 724px;
+    gap: 80px;
   }
   @media (min-width: 1440px) {
-  width: 1312px;
-   gap: 100px;
-     padding: 40px 123px;
+    width: 1312px;
+    gap: 100px;
+    padding: 40px 123px;
   }
-  
 `;
 export const ContainerStat = styled.div`
   gap: 2px;
   @media (min-width: 769px) {
   }
   @media (min-width: 1440px) {
-  display: flex;
-  gap: 16px;
+    display: flex;
+    gap: 16px;
   }
 `;
 export const Number = styled.p`
@@ -32,12 +31,12 @@ export const Number = styled.p`
   font-weight: 400;
   line-heigt: 100%;
   @media (min-width: 769px) {
-  text-align: center;
+    text-align: center;
   }
   @media (min-width: 1440px) {
-  font-size: 28px;
-  font-weight: 500;
-  line-heigt: 114%;
+    font-size: 28px;
+    font-weight: 500;
+    line-heigt: 114%;
   }
 `;
 export const Description = styled.p`
@@ -46,8 +45,8 @@ export const Description = styled.p`
   @media (min-width: 769px) {
   }
   @media (min-width: 1440px) {
-  font-size: 14px;
-  line-heigt: 100%;
-  width: 74px;
+    font-size: 14px;
+    line-heigt: 100%;
+    width: 74px;
   }
 `;

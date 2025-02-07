@@ -1,11 +1,11 @@
-@import-normalize; 
+@import-normalize;
 /* 769px 
 1440px*/
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-style: normal;

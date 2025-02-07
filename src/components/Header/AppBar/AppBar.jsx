@@ -11,7 +11,7 @@ import { signOut } from 'firebase/auth';
 import { auth } from '../../../firebase';
 import { deleteToken } from '../../../redux/authSlice';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 export const AppBar = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
@@ -27,14 +27,16 @@ export const AppBar = () => {
   return (
     <Container>
       <Navigation />
-      { isLoggedIn && <Button onClick={()=> setIsOpen(true)}>
-        <svg width="30" height="30">
-          <use xlinkHref={sprite + '#mobile-menu-open'}></use>
-        </svg>
-      </Button>}
+      {isLoggedIn && (
+        <Button onClick={() => setIsOpen(true)}>
+          <svg width="30" height="30">
+            <use xlinkHref={sprite + '#mobile-menu-open'}></use>
+          </svg>
+        </Button>
+      )}
       {isLoggedIn ? <UserMenu /> : <AuthNav />}
-     {isOpen && <MobileMenu onClose = {() => setIsOpen(false)}/>}
-    { isLoggedIn && <LogOut onClick={handlerLogOut}>Log out</LogOut>}
+      {isOpen && <MobileMenu onClose={() => setIsOpen(false)} />}
+      {isLoggedIn && <LogOut onClick={handlerLogOut}>Log out</LogOut>}
     </Container>
   );
 };

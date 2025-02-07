@@ -26,7 +26,6 @@ export const Registation = styled.button`
     font-size: 16px;
     width: 166px;
   }
-
 `;
 export const Login = styled.button`
   font-weight: 700;
@@ -46,8 +45,8 @@ export const Login = styled.button`
   }
   @media (min-width: 769px) {
     font-size: 16px;
-     min-width: 95px;
+    min-width: 95px;
     gap: 8px;
-     line-height: 125%;
+    line-height: 125%;
   }
 `;

@@ -1,8 +1,5 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-
-
-
 export const LinkLogo = styled(Link)`
   color: #121417;
   font-size: 12px;
@@ -21,4 +18,3 @@ export const LinkLogo = styled(Link)`
     font-size: 20px;
   }
 `;
- 

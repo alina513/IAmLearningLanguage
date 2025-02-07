@@ -24,9 +24,9 @@ export const ContainerNav = styled.div`
   gap: 8px;
   margin-left: 10px;
   @media (min-width: 769px) {
-   display: flex;
+    display: flex;
   }
   @media (min-width: 1440px) {
-  gap: 28px;
+    gap: 28px;
   }
 `;

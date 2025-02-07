@@ -30,7 +30,7 @@ const values = [
   { name: 'Culture, travel or hobby', id: '5', value: 'cultureTravelOrHobby' },
 ];
 
-export function Form({setIsOpenModalBook}) {
+export function Form({ setIsOpenModalBook }) {
   const {
     register,
     handleSubmit,

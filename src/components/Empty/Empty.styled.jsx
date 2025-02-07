@@ -13,6 +13,6 @@ export const Text = styled.p`
   color: red;
   font-width: 700;
   @media (min-width: 769px) {
-   font-size: 32px;
+    font-size: 32px;
   }
 `;

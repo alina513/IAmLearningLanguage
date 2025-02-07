@@ -26,10 +26,10 @@ export const Wrapper = styled.div`
   width: 350px;
   padding: 0px 18px 96px 18px;
   @media (min-width: 769px) {
-  width: 769px;
+    width: 769px;
   }
-     @media (min-width: 1440px) {
-  width: 1184px;
+  @media (min-width: 1440px) {
+    width: 1184px;
     padding: 0px 128px 96px 128px;
     display: flex;
     flex-direction: column;

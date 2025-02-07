@@ -7,14 +7,13 @@ export const Wrapper = styled.div`
   margin-top: 12px;
   position: relative;
   @media (min-width: 769px) {
-   margin-top: 32px;
-
+    margin-top: 32px;
   }
 `;
-export const ContainerPhoto = styled.div` 
+export const ContainerPhoto = styled.div`
   @media (min-width: 1440px) {
-   display: flex;
-  gap: 48px;
+    display: flex;
+    gap: 48px;
   }
 `;
 export const Photo = styled.img`
@@ -30,8 +29,8 @@ export const Photo = styled.img`
   padding: 12px;
   border: 3px solid #fbe9ba;
   @media (min-width: 769px) {
-   margin-right: 0px;
-  margin-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
   }
 `;
 export const ContainerText = styled.div`
@@ -40,13 +39,13 @@ export const ContainerText = styled.div`
 export const ContainerLang = styled.div`
   @media (min-width: 769px) {
     display: flex;
-  gap: 2px;
-  align-items: flex-end;
+    gap: 2px;
+    align-items: flex-end;
   }
   @media (min-width: 1440px) {
     display: flex;
     align-items: stretch;
-  gap: 92px;
+    gap: 92px;
   }
 `;
 
@@ -56,16 +55,15 @@ export const TitleLang = styled.h3`
   font-weight: 500;
   line-height: 150%;
   text-align: center;
-   margin-bottom: 20px;
+  margin-bottom: 20px;
   @media (min-width: 769px) {
-   text-align: start;
+    text-align: start;
     margin-bottom: 0px;
   }
 `;
 
 export const ListLanguage = styled.ul`
   display: flex;
- 
 `;
 export const ItemLanguage = styled.li`
   display: flex;
@@ -84,12 +82,11 @@ export const ItemLanguage = styled.li`
   &:last-child {
     border-right: none;
   }
-    margin-bottom: 20px;
-     @media (min-width: 769px) {
-     margin-bottom: 0px;
-     }
+  margin-bottom: 20px;
+  @media (min-width: 769px) {
+    margin-bottom: 0px;
+  }
   @media (min-width: 1440px) {
-    
     gap: 7px;
     font-size: 16px;
   }
@@ -103,7 +100,7 @@ export const Name = styled.h2`
   margin-bottom: 32px;
   text-align: center;
   @media (min-width: 769px) {
-     text-align: left;
+    text-align: left;
   }
 `;
 
@@ -114,7 +111,7 @@ export const TitleText = styled.h4`
   line-height: 150%;
   white-space: nowrap;
   @media (min-width: 769px) {
-     font-size: 16px;
+    font-size: 16px;
   }
 `;
 export const TextSpeaks = styled.h4`
@@ -124,7 +121,7 @@ export const TextSpeaks = styled.h4`
   line-height: 100%;
   text-decoration: underline;
   @media (min-width: 769px) {
-     font-size: 16px;
+    font-size: 16px;
   }
 `;
 
@@ -134,8 +131,8 @@ export const Text = styled.p`
   font-weight: 500;
   line-height: 120%;
   @media (min-width: 769px) {
-     font-size: 16px;
-     line-height: 100%;
+    font-size: 16px;
+    line-height: 100%;
   }
 `;
 export const ContainerItemText = styled.div`
@@ -160,9 +157,9 @@ export const ReadMore = styled.button`
   }
 `;
 export const ListLevel = styled.ul`
-    @media (min-width: 769px) {
+  @media (min-width: 769px) {
     display: flex;
-  gap: 8px;
+    gap: 8px;
   }
 `;
 export const ItemLevel = styled.li`
@@ -188,7 +185,7 @@ export const ItemLevel = styled.li`
     padding: 0px 8px;
     font-size: 12px;
   }
-     @media (min-width: 1440px) {
+  @media (min-width: 1440px) {
     margin-bottom: 0px;
     padding: 0px 12px;
     font-size: 14px;
@@ -222,31 +219,29 @@ margin-bottom; 24px;
 export const HeartButton = styled.button`
   border: none;
   background-color: #ffffff;
-position: absolute;
-    top: 10px;
-    right: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
   @media (min-width: 1440px) {
     position: static;
   }
 `;
 export const GreenContainer = styled.div`
   position: relative;
- 
-`
+`;
 
 export const Green = styled.svg`
   position: absolute;
   top: 20px;
   right: 98px;
-   @media (min-width: 769px) {
+  @media (min-width: 769px) {
     top: 25px;
-  right: 582px;
+    right: 582px;
   }
-   @media (min-width: 1440px) {
+  @media (min-width: 1440px) {
     top: 25px;
-  right: 20px;
+    right: 20px;
   }
-  
 `;
 
 export const PriceSpan = styled.span`
