@@ -3,33 +3,9 @@ import { nanoid } from 'nanoid';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { addFilter } from '../../redux/filterSlice';
+import { prices, languages, levels } from '../../const/filterArray';
 
 export function Filter() {
-  const languages = [
-    '',
-    'French',
-    'English',
-    'German',
-    'Ukrainian',
-    'Polish',
-    'Italian',
-    'Spanish',
-    'Mandarin Chinese',
-    'Korean',
-  ];
-
-  const levels = [
-    '',
-    'A1 Beginner',
-    'A2 Elementary',
-    'B1 Intermediate',
-    'B2 Upper-Intermediate',
-    'C1 Advanced',
-    'C2 Proficient',
-  ];
-
-  const prices = ['', 10, 20, 30, 40];
-
   const [statelanguage, setstateLanguages] = useState();
   const [statelevel, setStateLevel] = useState();
   const [stateprice, setStatePrices] = useState();
@@ -41,7 +17,6 @@ export function Filter() {
       prices: stateprice,
     };
   };
-
   const dispatch = useDispatch();
 
   const HandlerLanguages = e => {
@@ -63,7 +38,12 @@ export function Filter() {
     <Form>
       <Wrapper>
         <Lab>Languages</Lab>
-        <Select id="languages" name="languages" onChange={HandlerLanguages}>
+        <Select
+          id="languages"
+          name="languages"
+          onChange={HandlerLanguages}
+          value={statelanguage}
+        >
           {languages.map(language => (
             <option key={nanoid()} value={language}>
               {language}
@@ -74,7 +54,12 @@ export function Filter() {
 
       <Wrapper>
         <Lab>Level of knowledge</Lab>
-        <Select id="level" name="level" onChange={HandlerlLevel}>
+        <Select
+          id="level"
+          name="level"
+          onChange={HandlerlLevel}
+          value={statelevel}
+        >
           {levels.map(level => (
             <option key={nanoid()} value={level}>
               {level}
@@ -85,7 +70,12 @@ export function Filter() {
 
       <Wrapper>
         <Lab>Price</Lab>
-        <Select id="price" name="price" onChange={HandlerPrice}>
+        <Select
+          id="price"
+          name="price"
+          onChange={HandlerPrice}
+          value={stateprice}
+        >
           {prices.map(price => (
             <option key={nanoid()} value={price}>
               {price}

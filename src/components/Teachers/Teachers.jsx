@@ -54,6 +54,8 @@ export const Teachers = () => {
     return languageSearch && levelSearch && priceSearch;
   });
 
+
+
   return (
     <Wrapper>
       <Filter />

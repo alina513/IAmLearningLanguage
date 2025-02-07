@@ -17,19 +17,19 @@ export const Select = styled.select`
   color: #121417;
   border: none;
   outline: none;
-  border-radius: 14px;
+  border-radius: 10px;
   font-size: 14px;
   font-weight: 600;
   line-height: 111%;
   margin-bottom: 10px;
   & option {
     color: #8a8a89;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 8px;
+    font-weight: 400;
     line-height: 111%;
   }
   @media (min-width: 769px) {
-    font-size: 18px;
+    font-size: 14px;
     margin-bottom: 0px;
   }
 `;

@@ -52,7 +52,7 @@ export const ModalLogin = ({ isOpenModalLogin, setIsOpenModalLogin }) => {
             and continue your search for an teacher.
           </Text>
 
-          <Login setIsOpenModalLogin = {setIsOpenModalLogin}/>
+          <Login setIsOpenModalLogin={setIsOpenModalLogin} />
         </Wrapper>
       </Modal>
     </>
