@@ -37,7 +37,7 @@ export function Filter() {
   return (
     <Form>
       <Wrapper>
-        <Lab>Languages</Lab>
+        <Lab htmlFor="languages">Languages</Lab>
         <Select
           id="languages"
           name="languages"
@@ -53,7 +53,7 @@ export function Filter() {
       </Wrapper>
 
       <Wrapper>
-        <Lab>Level of knowledge</Lab>
+        <Lab htmlFor="level">Level of knowledge</Lab>
         <Select
           id="level"
           name="level"
@@ -69,7 +69,7 @@ export function Filter() {
       </Wrapper>
 
       <Wrapper>
-        <Lab>Price</Lab>
+        <Lab htmlFor="price">Price</Lab>
         <Select
           id="price"
           name="price"

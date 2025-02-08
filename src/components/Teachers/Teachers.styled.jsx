@@ -15,6 +15,7 @@ export const LoadMore = styled.button`
   margin-top: 65px;
   margin-right: auto;
   margin-left: auto;
+  transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     background-color: #f4c8ba;

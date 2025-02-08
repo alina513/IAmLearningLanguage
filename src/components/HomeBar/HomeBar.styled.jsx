@@ -71,6 +71,7 @@ export const Button = styled.button`
   border: none;
   align-items: center;
   justify-content: center;
+  transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     background-color: #f4c8ba;

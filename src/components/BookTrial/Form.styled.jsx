@@ -14,6 +14,7 @@ export const Book = styled.button`
   font-weight: 700;
 
   background-color: #f4c550;
+  transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 12px;
   &:hover,
   &:focus {

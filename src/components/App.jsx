@@ -11,6 +11,7 @@ import { addToken } from '../redux/authSlice';
 const HomePage = lazy(() => import('../pages/HomePage'));
 const TeachersPage = lazy(() => import('../pages/TeachersPage'));
 const FavoritesPage = lazy(() => import('../pages/FavoritesPage'));
+const ErrorPage = lazy(() => import('../pages/ErrorPage'));
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -27,7 +28,7 @@ export const App = () => {
       unsubscribe();
     };
   }, [dispatch]);
-  
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -36,7 +37,7 @@ export const App = () => {
           <Route path="reviews" element={<Reviews />} />
         </Route>
         <Route path="/favorites" element={<FavoritesPage />} />
-        <Route path="*" element={<HomePage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Route>
     </Routes>
   );

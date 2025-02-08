@@ -6,26 +6,19 @@ import { selectFilter } from '../../redux/selectors';
 import { LoadMore, Wrapper, Text } from './Teachers.styled';
 import { TeachersList } from '../TeacherList/TeacherList';
 import { Filter } from '../Filter/Filter';
+import { selectTeachers, selectIsLoading } from '../../redux/selectors';
+import { Loader } from '../Loader';
 
 export const Teachers = () => {
   const filter = useSelector(selectFilter);
-  const [teachers, setTeachers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [teachersPerPage] = useState(4);
   const dispatch = useDispatch();
+  const teachers = useSelector(selectTeachers);
+  const isLoading = useSelector(selectIsLoading);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await dispatch(fetchTeachers());
-        const data = response.payload;
-        setTeachers(data);
-      } catch (error) {
-        console.error('Loading error', error.message);
-      }
-    };
-
-    fetchData();
+    dispatch(fetchTeachers());
   }, [dispatch]);
 
   const indexOfFirstTeacher = 0;
@@ -57,6 +50,7 @@ export const Teachers = () => {
   return (
     <Wrapper>
       <Filter />
+      {isLoading && <Loader />}
 
       {filter.languages === '' &&
         filter.levels === '' &&
